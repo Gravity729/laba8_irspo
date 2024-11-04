@@ -1,0 +1,20 @@
+{
+  "DocumentingTheStudentAccountingSystem": "DocumentingTheStudentAccountingSystem.yml",
+  "DocumentingTheStudentAccountingSystem.EducationType": "DocumentingTheStudentAccountingSystem.EducationType.yml",
+  "DocumentingTheStudentAccountingSystem.EducationType.Budget": "DocumentingTheStudentAccountingSystem.EducationType.yml",
+  "DocumentingTheStudentAccountingSystem.EducationType.Contract": "DocumentingTheStudentAccountingSystem.EducationType.yml",
+  "DocumentingTheStudentAccountingSystem.Student": "DocumentingTheStudentAccountingSystem.Student.yml",
+  "DocumentingTheStudentAccountingSystem.Student.#ctor(System.String,System.String,System.Int32,System.String,DocumentingTheStudentAccountingSystem.EducationType)": "DocumentingTheStudentAccountingSystem.Student.yml",
+  "DocumentingTheStudentAccountingSystem.Student.Age": "DocumentingTheStudentAccountingSystem.Student.yml",
+  "DocumentingTheStudentAccountingSystem.Student.Education": "DocumentingTheStudentAccountingSystem.Student.yml",
+  "DocumentingTheStudentAccountingSystem.Student.FirstName": "DocumentingTheStudentAccountingSystem.Student.yml",
+  "DocumentingTheStudentAccountingSystem.Student.GetEducationTypeInRussian": "DocumentingTheStudentAccountingSystem.Student.yml",
+  "DocumentingTheStudentAccountingSystem.Student.LastName": "DocumentingTheStudentAccountingSystem.Student.yml",
+  "DocumentingTheStudentAccountingSystem.Student.StudentID": "DocumentingTheStudentAccountingSystem.Student.yml",
+  "DocumentingTheStudentAccountingSystem.StudentDatabase": "DocumentingTheStudentAccountingSystem.StudentDatabase.yml",
+  "DocumentingTheStudentAccountingSystem.StudentDatabase.AddStudent(DocumentingTheStudentAccountingSystem.Student)": "DocumentingTheStudentAccountingSystem.StudentDatabase.yml",
+  "DocumentingTheStudentAccountingSystem.StudentDatabase.FindStudent(System.String)": "DocumentingTheStudentAccountingSystem.StudentDatabase.yml",
+  "DocumentingTheStudentAccountingSystem.StudentDatabase.GetAllStudents": "DocumentingTheStudentAccountingSystem.StudentDatabase.yml",
+  "DocumentingTheStudentAccountingSystem.StudentDatabase.RemoveStudent(System.String)": "DocumentingTheStudentAccountingSystem.StudentDatabase.yml",
+  "DocumentingTheStudentAccountingSystem.StudentDatabase.SortStudentsByLastName": "DocumentingTheStudentAccountingSystem.StudentDatabase.yml"
+}

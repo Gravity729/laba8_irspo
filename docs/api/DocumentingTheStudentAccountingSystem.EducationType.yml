@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: DocumentingTheStudentAccountingSystem.EducationType
+  commentId: T:DocumentingTheStudentAccountingSystem.EducationType
+  id: EducationType
+  parent: DocumentingTheStudentAccountingSystem
+  children:
+  - DocumentingTheStudentAccountingSystem.EducationType.Budget
+  - DocumentingTheStudentAccountingSystem.EducationType.Contract
+  langs:
+  - csharp
+  - vb
+  name: EducationType
+  nameWithType: EducationType
+  fullName: DocumentingTheStudentAccountingSystem.EducationType
+  type: Enum
+  source:
+    remote:
+      path: laba8/EducationType.cs
+      branch: master
+      repo: https://github.com/Gravity729/laba8_irspo.git
+    id: EducationType
+    path: laba8/EducationType.cs
+    startLine: 5
+  assemblies:
+  - laba8
+  namespace: DocumentingTheStudentAccountingSystem
+  summary: Тип обучения студента.
+  example: []
+  syntax:
+    content: public enum EducationType
+    content.vb: Public Enum EducationType
+- uid: DocumentingTheStudentAccountingSystem.EducationType.Budget
+  commentId: F:DocumentingTheStudentAccountingSystem.EducationType.Budget
+  id: Budget
+  parent: DocumentingTheStudentAccountingSystem.EducationType
+  langs:
+  - csharp
+  - vb
+  name: Budget
+  nameWithType: EducationType.Budget
+  fullName: DocumentingTheStudentAccountingSystem.EducationType.Budget
+  type: Field
+  source:
+    remote:
+      path: laba8/EducationType.cs
+      branch: master
+      repo: https://github.com/Gravity729/laba8_irspo.git
+    id: Budget
+    path: laba8/EducationType.cs
+    startLine: 10
+  assemblies:
+  - laba8
+  namespace: DocumentingTheStudentAccountingSystem
+  summary: Обучение на бюджетной основе.
+  example: []
+  syntax:
+    content: Budget = 0
+    return:
+      type: DocumentingTheStudentAccountingSystem.EducationType
+- uid: DocumentingTheStudentAccountingSystem.EducationType.Contract
+  commentId: F:DocumentingTheStudentAccountingSystem.EducationType.Contract
+  id: Contract
+  parent: DocumentingTheStudentAccountingSystem.EducationType
+  langs:
+  - csharp
+  - vb
+  name: Contract
+  nameWithType: EducationType.Contract
+  fullName: DocumentingTheStudentAccountingSystem.EducationType.Contract
+  type: Field
+  source:
+    remote:
+      path: laba8/EducationType.cs
+      branch: master
+      repo: https://github.com/Gravity729/laba8_irspo.git
+    id: Contract
+    path: laba8/EducationType.cs
+    startLine: 15
+  assemblies:
+  - laba8
+  namespace: DocumentingTheStudentAccountingSystem
+  summary: Обучение на контрактной (платной) основе.
+  example: []
+  syntax:
+    content: Contract = 1
+    return:
+      type: DocumentingTheStudentAccountingSystem.EducationType
+references:
+- uid: DocumentingTheStudentAccountingSystem
+  commentId: N:DocumentingTheStudentAccountingSystem
+  href: DocumentingTheStudentAccountingSystem.html
+  name: DocumentingTheStudentAccountingSystem
+  nameWithType: DocumentingTheStudentAccountingSystem
+  fullName: DocumentingTheStudentAccountingSystem
+- uid: DocumentingTheStudentAccountingSystem.EducationType
+  commentId: T:DocumentingTheStudentAccountingSystem.EducationType
+  parent: DocumentingTheStudentAccountingSystem
+  href: DocumentingTheStudentAccountingSystem.EducationType.html
+  name: EducationType
+  nameWithType: EducationType
+  fullName: DocumentingTheStudentAccountingSystem.EducationType

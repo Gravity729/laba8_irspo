@@ -1,0 +1,122 @@
+\doxysection{Documenting\+The\+Student\+Accounting\+System.\+Student\+Database Class Reference}
+\hypertarget{class_documenting_the_student_accounting_system_1_1_student_database}{}\label{class_documenting_the_student_accounting_system_1_1_student_database}\index{DocumentingTheStudentAccountingSystem.StudentDatabase@{DocumentingTheStudentAccountingSystem.StudentDatabase}}
+
+
+Класс для работы с базой данных студентов.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_documenting_the_student_accounting_system_1_1_student_database_a0f91866b856609f948a53f954ae38fe5}{Add\+Student}} (\mbox{\hyperlink{class_documenting_the_student_accounting_system_1_1_student}{Student}} student)
+\begin{DoxyCompactList}\small\item\em Метод для добавления студента в базу. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_documenting_the_student_accounting_system_1_1_student_database_a1005c103e03269296f94f5f96b06527b}{Remove\+Student}} (string student\+Id)
+\begin{DoxyCompactList}\small\item\em Метод для удаления студента по номеру студенческого билета. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_documenting_the_student_accounting_system_1_1_student}{Student}} \mbox{\hyperlink{class_documenting_the_student_accounting_system_1_1_student_database_abac695dfedd545a791ea8d7e5215ecd7}{Find\+Student}} (string student\+Id)
+\begin{DoxyCompactList}\small\item\em Метод для поиска студента по номеру студенческого билета. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_documenting_the_student_accounting_system_1_1_student_database_a6a6c6d868133ccc9d18415134eaf0036}{Sort\+Students\+By\+Last\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Метод для сортировки студентов по фамилии. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_documenting_the_student_accounting_system_1_1_student}{Student}} $>$ \mbox{\hyperlink{class_documenting_the_student_accounting_system_1_1_student_database_a52d44ab89afde3f477dc6b72872197cf}{Get\+All\+Students}} ()
+\begin{DoxyCompactList}\small\item\em Получение списка всех студентов. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для работы с базой данных студентов. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_documenting_the_student_accounting_system_1_1_student_database_a0f91866b856609f948a53f954ae38fe5}\index{DocumentingTheStudentAccountingSystem.StudentDatabase@{DocumentingTheStudentAccountingSystem.StudentDatabase}!AddStudent@{AddStudent}}
+\index{AddStudent@{AddStudent}!DocumentingTheStudentAccountingSystem.StudentDatabase@{DocumentingTheStudentAccountingSystem.StudentDatabase}}
+\doxysubsubsection{\texorpdfstring{AddStudent()}{AddStudent()}}
+{\footnotesize\ttfamily \label{class_documenting_the_student_accounting_system_1_1_student_database_a0f91866b856609f948a53f954ae38fe5} 
+void Documenting\+The\+Student\+Accounting\+System.\+Student\+Database.\+Add\+Student (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_documenting_the_student_accounting_system_1_1_student}{Student}}}]{student}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод для добавления студента в базу. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em student} & Студент для добавления.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Выбрасывается, если студент равен null.\\
+\hline
+\end{DoxyExceptions}
+
+
+var db = new Student\+Database(); var student1 = new \doxylink{class_documenting_the_student_accounting_system_1_1_student}{Student}("{}Иван"{}, "{}Петров"{}, 20, "{}\+S12345"{}); db.\+Add\+Student(student1); // В данном примере добавляется новый студент Иван Петров. \Hypertarget{class_documenting_the_student_accounting_system_1_1_student_database_abac695dfedd545a791ea8d7e5215ecd7}\index{DocumentingTheStudentAccountingSystem.StudentDatabase@{DocumentingTheStudentAccountingSystem.StudentDatabase}!FindStudent@{FindStudent}}
+\index{FindStudent@{FindStudent}!DocumentingTheStudentAccountingSystem.StudentDatabase@{DocumentingTheStudentAccountingSystem.StudentDatabase}}
+\doxysubsubsection{\texorpdfstring{FindStudent()}{FindStudent()}}
+{\footnotesize\ttfamily \label{class_documenting_the_student_accounting_system_1_1_student_database_abac695dfedd545a791ea8d7e5215ecd7} 
+\mbox{\hyperlink{class_documenting_the_student_accounting_system_1_1_student}{Student}} Documenting\+The\+Student\+Accounting\+System.\+Student\+Database.\+Find\+Student (\begin{DoxyParamCaption}\item[{string}]{student\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод для поиска студента по номеру студенческого билета. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em student\+Id} & Номер студенческого билета студента для поиска.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Найденный студент или null, если студент не найден.
+\end{DoxyReturn}
+
+
+var db = new Student\+Database(); var student1 = new \doxylink{class_documenting_the_student_accounting_system_1_1_student}{Student}("{}Иван"{}, "{}Петров"{}, 20, "{}\+S12345"{}); var found\+Student = db.\+Find\+Student("{}\+S12345"{}); // Найдет студента Ивана \Hypertarget{class_documenting_the_student_accounting_system_1_1_student_database_a52d44ab89afde3f477dc6b72872197cf}\index{DocumentingTheStudentAccountingSystem.StudentDatabase@{DocumentingTheStudentAccountingSystem.StudentDatabase}!GetAllStudents@{GetAllStudents}}
+\index{GetAllStudents@{GetAllStudents}!DocumentingTheStudentAccountingSystem.StudentDatabase@{DocumentingTheStudentAccountingSystem.StudentDatabase}}
+\doxysubsubsection{\texorpdfstring{GetAllStudents()}{GetAllStudents()}}
+{\footnotesize\ttfamily \label{class_documenting_the_student_accounting_system_1_1_student_database_a52d44ab89afde3f477dc6b72872197cf} 
+List$<$ \mbox{\hyperlink{class_documenting_the_student_accounting_system_1_1_student}{Student}} $>$ Documenting\+The\+Student\+Accounting\+System.\+Student\+Database.\+Get\+All\+Students (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получение списка всех студентов. 
+
+\begin{DoxyReturn}{Returns}
+Список студентов.
+\end{DoxyReturn}
+
+
+var all\+Students = db.\+Get\+All\+Students(); // Получит список всех студентов \Hypertarget{class_documenting_the_student_accounting_system_1_1_student_database_a1005c103e03269296f94f5f96b06527b}\index{DocumentingTheStudentAccountingSystem.StudentDatabase@{DocumentingTheStudentAccountingSystem.StudentDatabase}!RemoveStudent@{RemoveStudent}}
+\index{RemoveStudent@{RemoveStudent}!DocumentingTheStudentAccountingSystem.StudentDatabase@{DocumentingTheStudentAccountingSystem.StudentDatabase}}
+\doxysubsubsection{\texorpdfstring{RemoveStudent()}{RemoveStudent()}}
+{\footnotesize\ttfamily \label{class_documenting_the_student_accounting_system_1_1_student_database_a1005c103e03269296f94f5f96b06527b} 
+void Documenting\+The\+Student\+Accounting\+System.\+Student\+Database.\+Remove\+Student (\begin{DoxyParamCaption}\item[{string}]{student\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод для удаления студента по номеру студенческого билета. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em student\+Id} & Номер студенческого билета студента для удаления.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Выбрасывается, если студент с указанным номером не найден.\\
+\hline
+\end{DoxyExceptions}
+
+
+var db = new Student\+Database(); var student1 = new \doxylink{class_documenting_the_student_accounting_system_1_1_student}{Student}("{}Иван"{}, "{}Петров"{}, 20, "{}\+S12345"{}); db.\+Remove\+Student("{}\+S12345"{}); // Удалит Ивана из базы \Hypertarget{class_documenting_the_student_accounting_system_1_1_student_database_a6a6c6d868133ccc9d18415134eaf0036}\index{DocumentingTheStudentAccountingSystem.StudentDatabase@{DocumentingTheStudentAccountingSystem.StudentDatabase}!SortStudentsByLastName@{SortStudentsByLastName}}
+\index{SortStudentsByLastName@{SortStudentsByLastName}!DocumentingTheStudentAccountingSystem.StudentDatabase@{DocumentingTheStudentAccountingSystem.StudentDatabase}}
+\doxysubsubsection{\texorpdfstring{SortStudentsByLastName()}{SortStudentsByLastName()}}
+{\footnotesize\ttfamily \label{class_documenting_the_student_accounting_system_1_1_student_database_a6a6c6d868133ccc9d18415134eaf0036} 
+void Documenting\+The\+Student\+Accounting\+System.\+Student\+Database.\+Sort\+Students\+By\+Last\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод для сортировки студентов по фамилии. 
+
+Алгоритм сортировки использует метод Order\+By из LINQ для упрощения сортировки списка студентов по их фамилии. 
+
+db.\+Sort\+Students\+By\+Last\+Name(); // Сортирует студентов по фамилии 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+laba8/Student\+Database.\+cs\end{DoxyCompactItemize}

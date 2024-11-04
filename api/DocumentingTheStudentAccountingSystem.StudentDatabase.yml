@@ -1,0 +1,660 @@
+### YamlMime:ManagedReference
+items:
+- uid: DocumentingTheStudentAccountingSystem.StudentDatabase
+  commentId: T:DocumentingTheStudentAccountingSystem.StudentDatabase
+  id: StudentDatabase
+  parent: DocumentingTheStudentAccountingSystem
+  children:
+  - DocumentingTheStudentAccountingSystem.StudentDatabase.AddStudent(DocumentingTheStudentAccountingSystem.Student)
+  - DocumentingTheStudentAccountingSystem.StudentDatabase.FindStudent(System.String)
+  - DocumentingTheStudentAccountingSystem.StudentDatabase.GetAllStudents
+  - DocumentingTheStudentAccountingSystem.StudentDatabase.RemoveStudent(System.String)
+  - DocumentingTheStudentAccountingSystem.StudentDatabase.SortStudentsByLastName
+  langs:
+  - csharp
+  - vb
+  name: StudentDatabase
+  nameWithType: StudentDatabase
+  fullName: DocumentingTheStudentAccountingSystem.StudentDatabase
+  type: Class
+  source:
+    remote:
+      path: laba8/StudentDatabase.cs
+      branch: master
+      repo: https://github.com/Gravity729/laba8_irspo.git
+    id: StudentDatabase
+    path: laba8/StudentDatabase.cs
+    startLine: 12
+  assemblies:
+  - laba8
+  namespace: DocumentingTheStudentAccountingSystem
+  summary: Класс для работы с базой данных студентов.
+  example: []
+  syntax:
+    content: public class StudentDatabase
+    content.vb: Public Class StudentDatabase
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: DocumentingTheStudentAccountingSystem.StudentDatabase.AddStudent(DocumentingTheStudentAccountingSystem.Student)
+  commentId: M:DocumentingTheStudentAccountingSystem.StudentDatabase.AddStudent(DocumentingTheStudentAccountingSystem.Student)
+  id: AddStudent(DocumentingTheStudentAccountingSystem.Student)
+  parent: DocumentingTheStudentAccountingSystem.StudentDatabase
+  langs:
+  - csharp
+  - vb
+  name: AddStudent(Student)
+  nameWithType: StudentDatabase.AddStudent(Student)
+  fullName: DocumentingTheStudentAccountingSystem.StudentDatabase.AddStudent(DocumentingTheStudentAccountingSystem.Student)
+  type: Method
+  source:
+    remote:
+      path: laba8/StudentDatabase.cs
+      branch: master
+      repo: https://github.com/Gravity729/laba8_irspo.git
+    id: AddStudent
+    path: laba8/StudentDatabase.cs
+    startLine: 31
+  assemblies:
+  - laba8
+  namespace: DocumentingTheStudentAccountingSystem
+  summary: Метод для добавления студента в базу.
+  example:
+  - >-
+    <pre><code class="lang-csharp">var db = new StudentDatabase();
+
+    var student1 = new Student("Иван", "Петров", 20, "S12345", EducationType.Budget); 
+
+    db.AddStudent(student1);  // В данном примере добавляется новый студент Иван Петров.</code></pre>
+  syntax:
+    content: public void AddStudent(Student student)
+    parameters:
+    - id: student
+      type: DocumentingTheStudentAccountingSystem.Student
+      description: Студент для добавления.
+    content.vb: Public Sub AddStudent(student As Student)
+  overload: DocumentingTheStudentAccountingSystem.StudentDatabase.AddStudent*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Выбрасывается, если студент равен null.
+- uid: DocumentingTheStudentAccountingSystem.StudentDatabase.RemoveStudent(System.String)
+  commentId: M:DocumentingTheStudentAccountingSystem.StudentDatabase.RemoveStudent(System.String)
+  id: RemoveStudent(System.String)
+  parent: DocumentingTheStudentAccountingSystem.StudentDatabase
+  langs:
+  - csharp
+  - vb
+  name: RemoveStudent(string)
+  nameWithType: StudentDatabase.RemoveStudent(string)
+  fullName: DocumentingTheStudentAccountingSystem.StudentDatabase.RemoveStudent(string)
+  type: Method
+  source:
+    remote:
+      path: laba8/StudentDatabase.cs
+      branch: master
+      repo: https://github.com/Gravity729/laba8_irspo.git
+    id: RemoveStudent
+    path: laba8/StudentDatabase.cs
+    startLine: 52
+  assemblies:
+  - laba8
+  namespace: DocumentingTheStudentAccountingSystem
+  summary: Метод для удаления студента по номеру студенческого билета.
+  example:
+  - >-
+    <pre><code class="lang-csharp">var db = new StudentDatabase();
+
+    var student1 = new Student("Иван", "Петров", 20, "S12345");
+
+    db.RemoveStudent("S12345"); // Удалит Ивана из базы</code></pre>
+  syntax:
+    content: public void RemoveStudent(string studentId)
+    parameters:
+    - id: studentId
+      type: System.String
+      description: Номер студенческого билета студента для удаления.
+    content.vb: Public Sub RemoveStudent(studentId As String)
+  overload: DocumentingTheStudentAccountingSystem.StudentDatabase.RemoveStudent*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Выбрасывается, если студент с указанным номером не найден.
+  nameWithType.vb: StudentDatabase.RemoveStudent(String)
+  fullName.vb: DocumentingTheStudentAccountingSystem.StudentDatabase.RemoveStudent(String)
+  name.vb: RemoveStudent(String)
+- uid: DocumentingTheStudentAccountingSystem.StudentDatabase.FindStudent(System.String)
+  commentId: M:DocumentingTheStudentAccountingSystem.StudentDatabase.FindStudent(System.String)
+  id: FindStudent(System.String)
+  parent: DocumentingTheStudentAccountingSystem.StudentDatabase
+  langs:
+  - csharp
+  - vb
+  name: FindStudent(string)
+  nameWithType: StudentDatabase.FindStudent(string)
+  fullName: DocumentingTheStudentAccountingSystem.StudentDatabase.FindStudent(string)
+  type: Method
+  source:
+    remote:
+      path: laba8/StudentDatabase.cs
+      branch: master
+      repo: https://github.com/Gravity729/laba8_irspo.git
+    id: FindStudent
+    path: laba8/StudentDatabase.cs
+    startLine: 74
+  assemblies:
+  - laba8
+  namespace: DocumentingTheStudentAccountingSystem
+  summary: Метод для поиска студента по номеру студенческого билета.
+  example:
+  - >-
+    <pre><code class="lang-csharp">var db = new StudentDatabase();
+
+    var student1 = new Student("Иван", "Петров", 20, "S12345");
+
+    var foundStudent = db.FindStudent("S12345"); // Найдет студента Ивана</code></pre>
+  syntax:
+    content: public Student FindStudent(string studentId)
+    parameters:
+    - id: studentId
+      type: System.String
+      description: Номер студенческого билета студента для поиска.
+    return:
+      type: DocumentingTheStudentAccountingSystem.Student
+      description: Найденный студент или null, если студент не найден.
+    content.vb: Public Function FindStudent(studentId As String) As Student
+  overload: DocumentingTheStudentAccountingSystem.StudentDatabase.FindStudent*
+  nameWithType.vb: StudentDatabase.FindStudent(String)
+  fullName.vb: DocumentingTheStudentAccountingSystem.StudentDatabase.FindStudent(String)
+  name.vb: FindStudent(String)
+- uid: DocumentingTheStudentAccountingSystem.StudentDatabase.SortStudentsByLastName
+  commentId: M:DocumentingTheStudentAccountingSystem.StudentDatabase.SortStudentsByLastName
+  id: SortStudentsByLastName
+  parent: DocumentingTheStudentAccountingSystem.StudentDatabase
+  langs:
+  - csharp
+  - vb
+  name: SortStudentsByLastName()
+  nameWithType: StudentDatabase.SortStudentsByLastName()
+  fullName: DocumentingTheStudentAccountingSystem.StudentDatabase.SortStudentsByLastName()
+  type: Method
+  source:
+    remote:
+      path: laba8/StudentDatabase.cs
+      branch: master
+      repo: https://github.com/Gravity729/laba8_irspo.git
+    id: SortStudentsByLastName
+    path: laba8/StudentDatabase.cs
+    startLine: 91
+  assemblies:
+  - laba8
+  namespace: DocumentingTheStudentAccountingSystem
+  summary: >-
+    Метод для сортировки студентов по фамилии.
+
+    <remarks>
+
+    Алгоритм сортировки использует метод OrderBy из LINQ для упрощения 
+
+    сортировки списка студентов по их фамилии. 
+
+    </remarks>
+  example:
+  - >-
+    <code>
+
+    db.SortStudentsByLastName(); // Сортирует студентов по фамилии
+
+    </code>
+  syntax:
+    content: public void SortStudentsByLastName()
+    content.vb: Public Sub SortStudentsByLastName()
+  overload: DocumentingTheStudentAccountingSystem.StudentDatabase.SortStudentsByLastName*
+- uid: DocumentingTheStudentAccountingSystem.StudentDatabase.GetAllStudents
+  commentId: M:DocumentingTheStudentAccountingSystem.StudentDatabase.GetAllStudents
+  id: GetAllStudents
+  parent: DocumentingTheStudentAccountingSystem.StudentDatabase
+  langs:
+  - csharp
+  - vb
+  name: GetAllStudents()
+  nameWithType: StudentDatabase.GetAllStudents()
+  fullName: DocumentingTheStudentAccountingSystem.StudentDatabase.GetAllStudents()
+  type: Method
+  source:
+    remote:
+      path: laba8/StudentDatabase.cs
+      branch: master
+      repo: https://github.com/Gravity729/laba8_irspo.git
+    id: GetAllStudents
+    path: laba8/StudentDatabase.cs
+    startLine: 105
+  assemblies:
+  - laba8
+  namespace: DocumentingTheStudentAccountingSystem
+  summary: Получение списка всех студентов.
+  example:
+  - >-
+    <code>
+
+    var allStudents = db.GetAllStudents(); // Получит список всех студентов
+
+    </code>
+  syntax:
+    content: public List<Student> GetAllStudents()
+    return:
+      type: System.Collections.Generic.List{DocumentingTheStudentAccountingSystem.Student}
+      description: Список студентов.
+    content.vb: Public Function GetAllStudents() As List(Of Student)
+  overload: DocumentingTheStudentAccountingSystem.StudentDatabase.GetAllStudents*
+references:
+- uid: DocumentingTheStudentAccountingSystem
+  commentId: N:DocumentingTheStudentAccountingSystem
+  href: DocumentingTheStudentAccountingSystem.html
+  name: DocumentingTheStudentAccountingSystem
+  nameWithType: DocumentingTheStudentAccountingSystem
+  fullName: DocumentingTheStudentAccountingSystem
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: DocumentingTheStudentAccountingSystem.StudentDatabase.AddStudent*
+  commentId: Overload:DocumentingTheStudentAccountingSystem.StudentDatabase.AddStudent
+  href: DocumentingTheStudentAccountingSystem.StudentDatabase.html#DocumentingTheStudentAccountingSystem_StudentDatabase_AddStudent_DocumentingTheStudentAccountingSystem_Student_
+  name: AddStudent
+  nameWithType: StudentDatabase.AddStudent
+  fullName: DocumentingTheStudentAccountingSystem.StudentDatabase.AddStudent
+- uid: DocumentingTheStudentAccountingSystem.Student
+  commentId: T:DocumentingTheStudentAccountingSystem.Student
+  parent: DocumentingTheStudentAccountingSystem
+  href: DocumentingTheStudentAccountingSystem.Student.html
+  name: Student
+  nameWithType: Student
+  fullName: DocumentingTheStudentAccountingSystem.Student
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: DocumentingTheStudentAccountingSystem.StudentDatabase.RemoveStudent*
+  commentId: Overload:DocumentingTheStudentAccountingSystem.StudentDatabase.RemoveStudent
+  href: DocumentingTheStudentAccountingSystem.StudentDatabase.html#DocumentingTheStudentAccountingSystem_StudentDatabase_RemoveStudent_System_String_
+  name: RemoveStudent
+  nameWithType: StudentDatabase.RemoveStudent
+  fullName: DocumentingTheStudentAccountingSystem.StudentDatabase.RemoveStudent
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DocumentingTheStudentAccountingSystem.StudentDatabase.FindStudent*
+  commentId: Overload:DocumentingTheStudentAccountingSystem.StudentDatabase.FindStudent
+  href: DocumentingTheStudentAccountingSystem.StudentDatabase.html#DocumentingTheStudentAccountingSystem_StudentDatabase_FindStudent_System_String_
+  name: FindStudent
+  nameWithType: StudentDatabase.FindStudent
+  fullName: DocumentingTheStudentAccountingSystem.StudentDatabase.FindStudent
+- uid: DocumentingTheStudentAccountingSystem.StudentDatabase.SortStudentsByLastName*
+  commentId: Overload:DocumentingTheStudentAccountingSystem.StudentDatabase.SortStudentsByLastName
+  href: DocumentingTheStudentAccountingSystem.StudentDatabase.html#DocumentingTheStudentAccountingSystem_StudentDatabase_SortStudentsByLastName
+  name: SortStudentsByLastName
+  nameWithType: StudentDatabase.SortStudentsByLastName
+  fullName: DocumentingTheStudentAccountingSystem.StudentDatabase.SortStudentsByLastName
+- uid: DocumentingTheStudentAccountingSystem.StudentDatabase.GetAllStudents*
+  commentId: Overload:DocumentingTheStudentAccountingSystem.StudentDatabase.GetAllStudents
+  href: DocumentingTheStudentAccountingSystem.StudentDatabase.html#DocumentingTheStudentAccountingSystem_StudentDatabase_GetAllStudents
+  name: GetAllStudents
+  nameWithType: StudentDatabase.GetAllStudents
+  fullName: DocumentingTheStudentAccountingSystem.StudentDatabase.GetAllStudents
+- uid: System.Collections.Generic.List{DocumentingTheStudentAccountingSystem.Student}
+  commentId: T:System.Collections.Generic.List{DocumentingTheStudentAccountingSystem.Student}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Student>
+  nameWithType: List<Student>
+  fullName: System.Collections.Generic.List<DocumentingTheStudentAccountingSystem.Student>
+  nameWithType.vb: List(Of Student)
+  fullName.vb: System.Collections.Generic.List(Of DocumentingTheStudentAccountingSystem.Student)
+  name.vb: List(Of Student)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DocumentingTheStudentAccountingSystem.Student
+    name: Student
+    href: DocumentingTheStudentAccountingSystem.Student.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DocumentingTheStudentAccountingSystem.Student
+    name: Student
+    href: DocumentingTheStudentAccountingSystem.Student.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

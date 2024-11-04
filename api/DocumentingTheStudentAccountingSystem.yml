@@ -1,0 +1,45 @@
+### YamlMime:ManagedReference
+items:
+- uid: DocumentingTheStudentAccountingSystem
+  commentId: N:DocumentingTheStudentAccountingSystem
+  id: DocumentingTheStudentAccountingSystem
+  children:
+  - DocumentingTheStudentAccountingSystem.EducationType
+  - DocumentingTheStudentAccountingSystem.Student
+  - DocumentingTheStudentAccountingSystem.StudentDatabase
+  langs:
+  - csharp
+  - vb
+  name: DocumentingTheStudentAccountingSystem
+  nameWithType: DocumentingTheStudentAccountingSystem
+  fullName: DocumentingTheStudentAccountingSystem
+  type: Namespace
+  assemblies:
+  - laba8
+references:
+- uid: DocumentingTheStudentAccountingSystem.EducationType
+  commentId: T:DocumentingTheStudentAccountingSystem.EducationType
+  parent: DocumentingTheStudentAccountingSystem
+  href: DocumentingTheStudentAccountingSystem.EducationType.html
+  name: EducationType
+  nameWithType: EducationType
+  fullName: DocumentingTheStudentAccountingSystem.EducationType
+- uid: DocumentingTheStudentAccountingSystem.Student
+  commentId: T:DocumentingTheStudentAccountingSystem.Student
+  parent: DocumentingTheStudentAccountingSystem
+  href: DocumentingTheStudentAccountingSystem.Student.html
+  name: Student
+  nameWithType: Student
+  fullName: DocumentingTheStudentAccountingSystem.Student
+- uid: DocumentingTheStudentAccountingSystem.StudentDatabase
+  commentId: T:DocumentingTheStudentAccountingSystem.StudentDatabase
+  href: DocumentingTheStudentAccountingSystem.StudentDatabase.html
+  name: StudentDatabase
+  nameWithType: StudentDatabase
+  fullName: DocumentingTheStudentAccountingSystem.StudentDatabase
+- uid: DocumentingTheStudentAccountingSystem
+  commentId: N:DocumentingTheStudentAccountingSystem
+  href: DocumentingTheStudentAccountingSystem.html
+  name: DocumentingTheStudentAccountingSystem
+  nameWithType: DocumentingTheStudentAccountingSystem
+  fullName: DocumentingTheStudentAccountingSystem

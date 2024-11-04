@@ -1,0 +1,12 @@
+### YamlMime:TableOfContent
+items:
+- uid: DocumentingTheStudentAccountingSystem
+  name: DocumentingTheStudentAccountingSystem
+  items:
+  - uid: DocumentingTheStudentAccountingSystem.EducationType
+    name: EducationType
+  - uid: DocumentingTheStudentAccountingSystem.Student
+    name: Student
+  - uid: DocumentingTheStudentAccountingSystem.StudentDatabase
+    name: StudentDatabase
+memberLayout: SamePage
